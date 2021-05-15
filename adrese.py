@@ -44,7 +44,7 @@ class IP:
             return ip_temp
         else:
             pos = 3
-            while pos >= 0 and ip_temp.octets[pos] == 255:
+            while pos > 0 and ip_temp.octets[pos] == 255:
                 ip_temp.octets[pos] = 0
                 pos -= 1
             ip_temp.octets[pos] += 1
