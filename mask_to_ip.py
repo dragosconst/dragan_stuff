@@ -61,10 +61,7 @@ def ip_to_mask(ip):
     ip_add = IP(ip)
     nm = 0
     for octet in ip_add.octets:
-        if octet == 255:
-            nm += 8
-        else:
-            nm += bin(octet).count('1')
+        nm += bin(octet).count('1')
     print(nm)
 
 mask_to_ip(20)
